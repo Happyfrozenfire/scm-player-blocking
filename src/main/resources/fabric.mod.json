@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "scm-player-blocking",
+  "version": "0.1.0",
+
+  "name": "SCM Player Blocking",
+  "description": "Block, mute, and hide players in Minecraft! ",
+  "authors": [
+    "Happyfrozenfire"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/happyfrozenfire/scm-player-blocking"
+  },
+
+  "license": "MIT",
+  "icon": "assets/scm-player-blocking/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.happyfrozenfire.scmplayerblocking.SCMPlayerBlocking"
+    ]
+  },
+  "mixins": [
+    "scm-player-blocking.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.12",
+    "fabric-api": ">=0.72.0",
+    "minecraft": "~1.19.2",
+    "java": ">=17"
+  },
+  "suggests": {
+
+  }
+}
