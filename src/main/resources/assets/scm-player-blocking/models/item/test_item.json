@@ -1,7 +1,0 @@
-{
-	"parent": "item/generated",
-	"textures": 
-	{
-		"layer0": "scm-player-blocking:test_item"
-	}
-}
