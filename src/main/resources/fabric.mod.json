@@ -19,7 +19,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.happyfrozenfire.scmplayerblocking.SCMPlayerBlocking"
+      "net.happyfrozenfire.scmplayerblocking.Main"
+    ],
+    "client": [
+      "net.happyfrozenfire.scmplayerblocking.Main"
+    ],
+    "server": [
+      "net.happyfrozenfire.scmplayerblocking.Main"
     ]
   },
   "mixins": [

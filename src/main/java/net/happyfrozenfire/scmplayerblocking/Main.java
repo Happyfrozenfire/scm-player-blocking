@@ -1,5 +1,7 @@
 package net.happyfrozenfire.scmplayerblocking;
 
+import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.api.DedicatedServerModInitializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
@@ -8,7 +10,7 @@ import net.minecraft.util.registry.Registry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class SCMPlayerBlocking implements ModInitializer
+public class Main implements ModInitializer, ClientModInitializer, DedicatedServerModInitializer
 {
     public static final String MOD_ID = "scm-player-blocking";
 
@@ -32,5 +34,17 @@ public class SCMPlayerBlocking implements ModInitializer
 
         //TODO remove temporary test item
         Registry.register(Registry.ITEM, new Identifier("scm-player-blocking", "test_item"), TEST_ITEM);
+    }
+
+    @Override
+    public void onInitializeClient()
+    {
+        LOGGER.info("Initializing Client");
+    }
+
+    @Override
+    public void onInitializeServer()
+    {
+        LOGGER.info("Initializing Server");
     }
 }
